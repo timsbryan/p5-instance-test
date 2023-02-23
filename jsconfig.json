@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "System",
+        "target": "es5",
+        "checkJs": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "moduleResolution": "node"
+    },
+    "exclude": ["node_modules", "**/node_modules/*", "dist", "coverage", ".cache"],
+    "typeAcquisition": {
+        "include": ["p5"]
+    }
+}
