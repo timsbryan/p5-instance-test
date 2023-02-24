@@ -1,16 +1,18 @@
 'use strict';
 
-import { s } from '../src/sketch.js';
+import { Sketch } from '../src/sketch.js';
 import p5 from 'p5';
 
 jest.mock('p5');
 
 describe('The sketch should', () => {
-  let thing = new s(p5);
+  let sketch;
+
   beforeEach(() => {
+    sketch = new Sketch();
   });
 
   test('be setup', () => {
-    expect(thing.y).toEqual(1);
+    expect(sketch.add(1,2)).toBe(3);
   });
 });

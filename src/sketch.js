@@ -2,20 +2,29 @@
 
 import p5 from 'p5';
 
-export let s = (sketch) => {
-  let x = 100;
-  let y = 100;
+export class Sketch extends p5 {
+  constructor() {
+    super(() => {});
 
-  sketch.setup = () => {
-    sketch.createCanvas(200, 200);
+    this.x = 100;
+    this.y = 100;
+  }
+  
 
-  };
+  setup() {
+    this.createCanvas(200, 200);
 
-  sketch.draw = () => {
-    sketch.background(0);
-    sketch.fill(255);
-    sketch.rect(x,y,50,50);
-  };
-};
+  }
 
-const myp5 = new p5(s);
+  draw () {
+    this.background(0);
+    this.fill(255);
+    this.rect(this.x, this.y, 50, 50);
+  }
+
+  add (a, b) {
+    return a + b;
+  }
+}
+
+new Sketch();
